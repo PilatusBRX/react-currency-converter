@@ -30,7 +30,6 @@ const Converter = () => {
         const result = (data.rates[convertTo] * amount).toFixed(2);
         setResult(result);
         setDate(date);
-        console.log(date);
       }, []);
   });
 
