@@ -5,6 +5,7 @@ import Header from './Header';
 
 const Converter = () => {
   const API = 'https://api.exchangeratesapi.io/latest';
+  // eslint-disable-next-line
   const [currencies, setCurrencies] = useState(['USD', 'BRL', 'EUR', 'GBP']);
   const [base, setBase] = useState('USD');
   const [convertTo, setConvertTo] = useState('BRL');
@@ -32,7 +33,7 @@ const Converter = () => {
         setDate(date);
       }, []);
   });
-
+  // eslint-disable-next-line
   const calculate = () => {
     if (amount === isNaN) {
       return;
@@ -40,6 +41,7 @@ const Converter = () => {
       fetch(`${API}?base=${base}`)
         .then((res) => res.json())
         .then((data) => {
+          // eslint-disable-next-line
           const result = data.rates[convertTo] * amount;
         }, []);
     }
