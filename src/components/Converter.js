@@ -4,7 +4,8 @@ import Swap from './Swap';
 import Header from './Header';
 
 const Converter = () => {
-  const API = 'https://api.exchangeratesapi.io/latest';
+  
+   const API = 'http://api.exchangeratesapi.io/v1/latest?access_key=ec570f911dc2f745c38cf53df41a2066';
   // eslint-disable-next-line
   const [currencies, setCurrencies] = useState(['USD', 'BRL', 'EUR', 'GBP']);
   const [base, setBase] = useState('USD');
